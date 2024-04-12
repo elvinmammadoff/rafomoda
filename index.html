@@ -1,11 +1,792 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Raful Beauty Salon Slider</title>
+
+    <!-- CSS Stylesheet -->
+    <link href="src/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/assets/css/materialdesignicons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="src/assets/css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxygen:wght@300;400;700&family=Roboto+Slab:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- Header -->
+    <header class="position-relative top-0 left-0 z-1 w-100" id="header">
+
+        <!-- Header Top -->
+        <div class="header-top d-none d-md-block">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+
+                    <!-- Header Top Left -->
+                    <div class="header-top_l d-flex align-items-center">
+                        <a href="#" class="link-light header-top_link">
+                            <i class="mdi mdi-lock"></i> Login / Register
+                        </a>
+                        <div class="dropdown">
+                            <a href="#" class="d-block link-dark header-top_link dropdown-toggle text-white" id="langDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                English
+                            </a>
+                            <ul class="dropdown-menu text-small" aria-labelledby="langDropdown">
+                                <li><a class="dropdown-item" href="#">Russian</a></li>
+                                <li><a class="dropdown-item" href="#">Turkish</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown">
+                            <a href="#" class="d-block link-dark header-top_link dropdown-toggle text-white"
+                                id="currencyDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                USD
+                            </a>
+                            <ul class="dropdown-menu text-small" aria-labelledby="currencyDropdown">
+                                <li><a class="dropdown-item" href="#">EURO</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Header Top Right -->
+                    <div class="header-top_r d-flex align-items-center">
+                        <a href="#" class="link-light header-top_link">
+                            <i class="mdi mdi-account"></i> My Account
+                        </a>
+                        <a href="#" class="link-light header-top_link">
+                            <i class="mdi mdi-gift"></i> My Wishlist
+                        </a>
+                        <a href="#" class="link-light header-top_link">
+                            <i class="mdi mdi-check-circle"></i> Checkout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-fixed">
+
+            <!-- Header Logo -->
+            <div class="header-logo d-none d-md-block">
+                <div class="container">
     
+                    <!-- Logo -->
+                    <a href="#" class="navbar-brand">
+                        <img src="src/assets/img/rafomoda-logo.png" alt="">
+                    </a>
+                    <div class="d-flex align-items-center gap-x-10">
+    
+                        <!-- Search Input -->
+                        <form class="search-form">
+                            <input type="text" class="form-control search-input" placeholder="Search by product..." aria-label="Search">
+                            <button type="submit">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                        </form>
+    
+                        <!-- Shopping Basket -->
+                        <a href="#" class="link-light d-flex align-items-center basket-link">
+                            <i class="mdi mdi-shopping"></i>
+                            <div class="d-flex flex-column">
+                                <div class="basket-link_label">Shopping Cart</div>
+                                <span class="basket-link_status">(empty)</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-light">
+                <div class="container">
+                    <div class="d-none d-md-block">
+    
+                        <!-- Navbar Links -->
+                        <ul class="nav" id="nav">
+                            <li><a href="#home" class="nav-link px-2 link-light scrollto">Home</a></li>
+                            <li><a href="#category" class="nav-link px-2 link-light scrollto">Category</a></li>
+                            <li><a href="#popular" class="nav-link px-2 link-light scrollto">Popular</a></li>
+                            <li><a href="#new" class="nav-link px-2 link-light scrollto">New</a></li>
+                            <li><a href="#shop" class="nav-link px-2 link-light scrollto">Shop</a></li>
+                            <li><a href="#blog" class="nav-link px-2 link-light scrollto">Blog</a></li>
+                            <li><a href="#contact" class="nav-link px-2 link-light scrollto">Contact</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Mobile Navbar -->
+                    <div class="d-block d-md-none w-100">
+                        <div class="d-flex justify-content-between">
+    
+                            <!-- Mobile Navbar Logo -->
+                            <a href="#" class="navbar-brand">
+                                <img src="src/assets/img/rafomoda-logo.png" alt="">
+                            </a>
+    
+                            <!-- Mobile Toggle Menu Button -->
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+    
+                            <!-- Mobile Toggle Right Menu -->
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                                aria-labelledby="offcanvasNavbarLabel">
+    
+                                <!-- Mobile Menu Header -->
+                                <div class="offcanvas-header">
+    
+                                    <!-- Logo -->
+                                    <a href="#" class="navbar-brand">
+                                        <img src="src/assets/img/rafomoda-logo.png" alt="">
+                                    </a>
+    
+                                    <!-- Mobile Menu Close Button -->
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                                        <i class="mdi mdi-close"></i>
+                                    </button>
+                                </div>
+    
+                                <!-- Mobile Menu Body -->
+                                <div class="offcanvas-body">
+    
+                                    <!-- Mobile Menu Search Input -->
+                                    <form class="d-flex search-mob">
+                                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                        <button class="btn" type="submit">
+                                            <i class="mdi mdi-magnify"></i>
+                                        </button>
+                                    </form>
+    
+                                    <!-- Mobile Menu Links -->
+                                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                                            <a href="#home" class="nav-link">Home</a>
+                                        </li>
+                                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                                            <a href="#category" class="nav-link">Category</a>
+                                        </li>
+                                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                                            <a href="#popular" class="nav-link">Popular</a>
+                                        </li>
+                                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                                            <a href="#new" class="nav-link">New</a>
+                                        </li>
+                                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                                            <a href="#shop" class="nav-link">Shop</a>
+                                        </li>
+                                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                                            <a href="#blog" class="nav-link">Blog</a>
+                                        </li>
+                                        <li class="nav-item" data-bs-dismiss="offcanvas">
+                                            <a href="#contact" class="nav-link">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Carousel Hero -->
+    <div id="myCarousel" class="carousel slide carousel-fade mb-6" data-bs-ride="carousel" data-bs-theme="light">
+
+        <!-- Carousel Inner -->
+        <div class="carousel-inner" id="home">
+
+            <!-- Carousel Item Active -->
+            <div class="carousel-item active">
+
+                <!-- Carousel Image -->
+                <img src="src/assets/img/Slider.jpg" alt="" class="w-100 carousel-img">
+                <div class="container">
+
+                    <!-- Carousel Caption -->
+                    <div class="carousel-caption text-start">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-9 col-lg-7">
+
+                                <!-- Carousel Content -->
+                                <div class="carousel-content">
+
+                                    <!-- Carousel Title -->
+                                    <h2 class="carousel-ttl">New Shoes</h2>
+
+                                    <!-- Carousel Text -->
+                                    <p class="carousel-txt">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Item -->
+            <div class="carousel-item">
+
+                <!-- Carousel Image -->
+                <img src="src/assets/img/Slider.jpg" alt="" class="w-100 carousel-img">
+                <div class="container">
+
+                    <!-- Carousel Caption -->
+                    <div class="carousel-caption text-start">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-9 col-lg-7">
+
+                                <!-- Carousel Content -->
+                                <div class="carousel-content">
+
+                                    <!-- Carousel Title -->
+                                    <h2 class="carousel-ttl">Body Care Center</h2>
+
+                                    <!-- Carousel Text -->
+                                    <p class="carousel-txt">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Item -->
+            <div class="carousel-item">
+
+                <!-- Carousel Image -->
+                <img src="src/assets/img/Slider.jpg" alt="" class="w-100 carousel-img">
+                <div class="container">
+
+                    <!-- Carousel Caption -->
+                    <div class="carousel-caption text-start">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-9 col-lg-7">
+
+                                <!-- Carousel Content -->
+                                <div class="carousel-content">
+
+                                    <!-- Carousel Title -->
+                                    <h2 class="carousel-ttl">New Shoes</h2>
+
+                                    <!-- Carousel Text -->
+                                    <p class="carousel-txt">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 col-lg-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Control Prev -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <img src="./src/assets/img/left-arrow.png" alt="control-prev">
+        </button>
+
+        <!-- Carousel Control Next -->
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <img src="./src/assets/img/right-arrow.png" alt="control-next">
+        </button>
+    </div>
+
+    <!-- Category -->
+    <div class="category section" id="category">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-3">
+
+                    <!-- Category Info -->
+                    <div class="category-info">
+                        <h3 class="category-title">Classified Categories</h3>
+                        <p class="category-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-9">
+
+                    <!-- Category List -->
+                    <div class="category-list">
+
+                        <!-- Category Card -->
+                        <a class="category-card">
+                            <img src="src/assets/img/category/Icon-1.png" alt="" class="category-icon">
+                            <h4 class="category-name">long dress</h4>
+                        </a>
+
+                        <!-- Category Card -->
+                        <a class="category-card">
+                            <img src="src/assets/img/category/Icon-2.png" alt="" class="category-icon">
+                            <h4 class="category-name">long dress</h4>
+                        </a>
+
+                        <!-- Category Card -->
+                        <a class="category-card">
+                            <img src="src/assets/img/category/Icon-3.png" alt="" class="category-icon">
+                            <h4 class="category-name">long dress</h4>
+                        </a>
+
+                        <!-- Category Card -->
+                        <a class="category-card">
+                            <img src="src/assets/img/category/Icon-4.png" alt="" class="category-icon">
+                            <h4 class="category-name">long dress</h4>
+                        </a>
+
+                        <!-- Category Card -->
+                        <a class="category-card">
+                            <img src="src/assets/img/category/Icon-5.png" alt="" class="category-icon">
+                            <h4 class="category-name">long dress</h4>
+                        </a>
+
+                        <!-- Category Card -->
+                        <a class="category-card">
+                            <img src="src/assets/img/category/Icon-6.png" alt="" class="category-icon">
+                            <h4 class="category-name">long dress</h4>
+                        </a>
+
+                        <!-- Category Card -->
+                        <a class="category-card">
+                            <img src="src/assets/img/category/Icon-7.png" alt="" class="category-icon">
+                            <h4 class="category-name">long dress</h4>
+                        </a>
+
+                        <!-- Category Card -->
+                        <a class="category-card">
+                            <img src="src/assets/img/category/Icon-8.png" alt="" class="category-icon">
+                            <h4 class="category-name">long dress</h4>
+                        </a>
+
+                        <!-- Category Card -->
+                        <a class="category-card">
+                            <img src="src/assets/img/category/Icon-1.png" alt="" class="category-icon">
+                            <h4 class="category-name">long dress</h4>
+                        </a>
+
+                        <!-- Category More Link -->
+                        <a class="category-card category-button">
+                            <h4 class="category-name">View more categories</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collection Most Popular -->
+    <div class="collect section" id="popular">
+
+        <!-- Collection Parallax Background Image -->
+        <div class="collect-bg collect-popular"></div>
+
+        <!-- Collection Content -->
+        <div class="collect-content">
+            <div class="container">
+                <div class="collect-subject">
+
+                    <!-- Collection Title -->
+                    <h3 class="collect-title"><span>Most</span>Popular</h3>
+                </div>
+
+                <!-- Collection Product List -->
+                <div class="collect-list">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+
+                            <!-- Collection Product Item -->
+                            <a href="#" class="collect-item">
+                                <div class="collect-img">
+                                    <img src="src/assets/img/product/Pro-1.jpg" alt="">
+                                </div>
+                                <div class="collect-dets">
+                                    <h4 class="collect-name">Lorem ipsum dolor sit amet, consectetur</h4>
+                                    <span class="collect-price">$4000.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+
+                            <!-- Collection Product Item -->
+                            <a href="#" class="collect-item">
+                                <div class="collect-img">
+                                    <img src="src/assets/img/product/Pro-2.jpg" alt="">
+                                </div>
+                                <div class="collect-dets">
+                                    <h4 class="collect-name">Lorem ipsum dolor sit amet, consectetur</h4>
+                                    <span class="collect-price">$4000.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+
+                            <!-- Collection Product Item -->
+                            <a href="#" class="collect-item">
+                                <div class="collect-img">
+                                    <img src="src/assets/img/product/Pro-3.jpg" alt="">
+                                </div>
+                                <div class="collect-dets">
+                                    <h4 class="collect-name">Lorem ipsum dolor sit amet, consectetur</h4>
+                                    <span class="collect-price">$4000.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+
+                            <!-- Collection Product Item -->
+                            <a href="#" class="collect-item">
+                                <div class="collect-img">
+                                <img src="src/assets/img/product/Pro-4.jpg" alt="">
+                            </div>
+                                <div class="collect-dets">
+                                    <h4 class="collect-name">Lorem ipsum dolor sit amet, consectetur</h4>
+                                    <span class="collect-price">$4000.00</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collection New Arrivals -->
+    <div class="collect section" id="new">
+
+        <!-- Collection Parallax Background Image -->
+        <div class="collect-bg collect-new"></div>
+
+        <!-- Collection Content -->
+        <div class="collect-content">
+            <div class="container">
+                <div class="collect-subject">
+
+                    <!-- Collection Title -->
+                    <h3 class="collect-title"><span>New</span>Arrivals</h3>
+                </div>
+
+                <!-- Collection Product List -->
+                <div class="collect-list">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+
+                            <!-- Collection Product Item -->
+                            <a href="#" class="collect-item">
+                                <div class="collect-img">
+                                    <img src="src/assets/img/product/Pro-5.jpg" alt="">
+                                </div>
+                                <div class="collect-dets">
+                                    <h4 class="collect-name">Lorem ipsum dolor sit amet, consectetur</h4>
+                                    <span class="collect-price">$4000.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+
+                            <!-- Collection Product Item -->
+                            <a href="#" class="collect-item">
+                                <div class="collect-img">
+                                    <img src="src/assets/img/product/Pro-6.jpg" alt="">
+                                </div>
+                                <div class="collect-dets">
+                                    <h4 class="collect-name">Lorem ipsum dolor sit amet, consectetur</h4>
+                                    <span class="collect-price">$4000.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+
+                            <!-- Collection Product Item -->
+                            <a href="#" class="collect-item">
+                                <div class="collect-img">
+                                    <img src="src/assets/img/product/Pro-7.jpg" alt="">
+                                </div>
+                                <div class="collect-dets">
+                                    <h4 class="collect-name">Lorem ipsum dolor sit amet, consectetur</h4>
+                                    <span class="collect-price">$4000.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+
+                            <!-- Collection Product Item -->
+                            <a href="#" class="collect-item">
+                                <div class="collect-img">
+                                    <img src="src/assets/img/product/Pro-8.jpg" alt="">
+                                </div>
+                                <div class="collect-dets">
+                                    <h4 class="collect-name">Lorem ipsum dolor sit amet, consectetur</h4>
+                                    <span class="collect-price">$4000.00</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop -->
+    <div class="shop d-flex" id="shop">
+
+        <!-- Shop Card -->
+        <div class="shop-card">
+
+            <!-- Shop Image -->
+            <img src="src/assets/img/shop/New-Store.jpg" alt="" class="shop-bg">
+            <div class="container">
+                <div class="shop-subject">
+
+                    <!-- Shop Title -->
+                    <h3 class="shop-title"><span>New</span> Store</h3>
+
+                    <!-- Shop Link -->
+                    <a href="#" class="shop-link">Shop Now <i class="mdi mdi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Card -->
+        <div class="shop-card">
+
+            <!-- Shop Image -->
+            <img src="src/assets/img/shop/New-Collection.jpg" alt="" class="shop-bg">
+            <div class="container">
+                <div class="shop-subject">
+
+                    <!-- Shop Title -->
+                    <h3 class="shop-title"><span>New</span> Collection</h3>
+
+                    <!-- Shop Link -->
+                    <a href="#" class="shop-link">Shop Now <i class="mdi mdi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News -->
+    <div class="news" id="news">
+        <div class="container">
+
+            <!-- News Title -->
+            <h3 class="news-title text-center">Latest News</h3>
+
+            <!-- News Subtitle -->
+            <p class="news-subttl w-50 mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <!-- News List -->
+            <div class="news-list">
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <!-- News Item -->
+                        <div class="news-item">
+
+                            <!-- News Image -->
+                            <div class="news-item_img">
+                                <img src="src/assets/img/news/News-1.jpg" alt="" class="w-100">
+                            </div>
+
+                            <!-- News Item Body -->
+                            <div class="news-item_body">
+
+                                <!-- News Item Title -->
+                                <h3 class="news-item_ttl">Lorem ipsum dolor sit amet, consecte</h3>
+
+                                <!-- News Details -->
+                                <div class="news-details">
+
+                                    <!-- News Details Item -->
+                                    <div class="news-details_item">
+                                        <i class="mdi mdi-clock"></i> 2016/5/10
+                                    </div>
+
+                                    <!-- News Details Item -->
+                                    <div class="news-details_item">
+                                        <i class="mdi mdi-comment"></i> 10
+                                    </div>
+
+                                    <!-- News Details More -->
+                                    <a href="" class="news-details_more">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        <!-- News Item -->
+                        <div class="news-item">
+
+                            <!-- News Image -->
+                            <div class="news-item_img">
+                                <img src="src/assets/img/news/News-2.jpg" alt="" class="w-100">
+                            </div>
+
+                            <!-- News Item Body -->
+                            <div class="news-item_body">
+
+                                <!-- News Item Title -->
+                                <h3 class="news-item_ttl">Lorem ipsum dolor sit amet, consecte</h3>
+
+                                <!-- News Details -->
+                                <div class="news-details">
+
+                                    <!-- News Details Item -->
+                                    <div class="news-details_item">
+                                        <i class="mdi mdi-clock"></i> 2016/5/10
+                                    </div>
+
+                                    <!-- News Details Item -->
+                                    <div class="news-details_item">
+                                        <i class="mdi mdi-comment"></i> 10
+                                    </div>
+
+                                    <!-- News Details More -->
+                                    <a href="" class="news-details_more">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        <!-- News Item -->
+                        <div class="news-item">
+
+                            <!-- News Image -->
+                            <div class="news-item_img">
+                                <img src="src/assets/img/news/News-3.jpg" alt="" class="w-100">
+                            </div>
+
+                            <!-- News Item Body -->
+                            <div class="news-item_body">
+
+                                <!-- News Item Title -->
+                                <h3 class="news-item_ttl">Lorem ipsum dolor sit amet, consecte</h3>
+
+                                <!-- News Details -->
+                                <div class="news-details">
+
+                                    <!-- News Details Item -->
+                                    <div class="news-details_item">
+                                        <i class="mdi mdi-clock"></i> 2016/5/10
+                                    </div>
+
+                                    <!-- News Details Item -->
+                                    <div class="news-details_item">
+                                        <i class="mdi mdi-comment"></i> 10
+                                    </div>
+
+                                    <!-- News Details More -->
+                                    <a href="" class="news-details_more">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+    
+                    <!-- Footer About -->
+                    <h4 class="footer-ttl">About us</h4>
+                    <p class="footer-about">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute.
+                    </p>
+    
+                    <!-- Footer Title -->
+                    <h4 class="footer-ttl">Follow us on</h4>
+    
+                    <!-- Footer Social -->
+                    <div class="social">
+                        <a href="" class="social-link">
+                            <i class="mdi mdi-facebook"></i>
+                        </a>
+                        <a href="" class="social-link">
+                            <i class="mdi mdi-twitter"></i>
+                        </a>
+                        <a href="" class="social-link">
+                            <i class="mdi mdi-linkedin"></i>
+                        </a>
+                        <a href="" class="social-link">
+                            <i class="mdi mdi-pinterest"></i>
+                        </a>
+                        <a href="" class="social-link">
+                            <i class="mdi mdi-reddit"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+    
+                    <!-- Footer Title -->
+                    <h4 class="footer-ttl">Information</h4>
+    
+                    <!-- Footer Nav -->
+                    <ul class="footer-nav">
+                        <li><a href="">Home Page</a></li>
+                        <li><a href="">Category</a></li>
+                        <li><a href="">Most Popular</a></li>
+                        <li><a href="">New Arrivals</a></li>
+                        <li><a href="">Shop Now</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+    
+                    <!-- Footer Title -->
+                    <h4 class="footer-ttl">Customer Service</h4>
+    
+                    <!-- Footer Nav -->
+                    <ul class="footer-nav">
+                        <li><a href="">Payment</a></li>
+                        <li><a href="">Returns & Warranties</a></li>
+                        <li><a href="">Shipping Information</a></li>
+                        <li><a href="">Tracking Your Order</a></li>
+                        <li><a href="">Ordering Information</a></li>
+                        <li><a href="">Safety, Security, & Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+    
+                    <!-- Footer Title -->
+                    <h4 class="footer-ttl">My Account</h4>
+    
+                    <!-- Footer Nav -->
+                    <ul class="footer-nav">
+                        <li><a href="">Sign In</a></li>
+                        <li><a href="">View Cart</a></li>
+                        <li><a href="">Check Out</a></li>
+                        <li><a href="">Track My Order</a></li>
+                        <li><a href="">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Copyright -->
+            <div class="copyright">
+                <p class="copyright_col">Copyright © 2024 RAFOMODA. All Rights Reserved.</p>
+                <span class="copyright_col">Design by Alissio</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="src/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="src/assets/js/custom.js"></script>
 </body>
+
 </html>
