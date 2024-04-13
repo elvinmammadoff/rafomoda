@@ -456,12 +456,13 @@ header .nav-link {
   background-color: rgba(185, 3, 24, 0.8);
 }
 
+
 .collect-popular {
-  background-image: url('../img/collect/Most-Popular.png');
+  background-image: url('https://placehold.co/1540x520');
 }
 
 .collect-new {
-  background-image: url('../img/collect/New-Arrivals.png');
+  background-image: url('https://placehold.co/1540x520');
 }
 
 .collect-content {
