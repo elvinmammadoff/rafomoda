@@ -1,7 +1,7 @@
 <div class="user-html user-html__with-lazy-load"><a href="https://rafomoda.netlify.app/documentation/" rel="nofollow" target="_blank"><img src="https://rafomoda.netlify.app/src/assets/img/doc.png" alt="RafoModa - Online Documentation"></a>
-<h3 id="item-description__rafomoda-responsive-fashion-landing-page-template">RafoModa – Responsive Fashion Landing Page Template</h3>
+<h3 id="item-description__rafomoda-responsive-fashion-shop-landing-page-template">RafoModa – Responsive Fashion Shop Landing Page Template</h3>
 <p>
-                <strong>RafoModa</strong> – Bootstrap 5 based Fashion Landing Page HTML Template. 
+                <strong>RafoModa</strong> – Bootstrap 5 based Fashion Shop Landing Page HTML Template. 
 RafoModa is a clean, premium and modern HTML5 and CSS3 Template which can be used to create any site for multiple scenarios. 
 It’s suitable for selling clothing, fashion, high fashion, men fashion, women fashion, accessories, digital, kids, watches, jewelries, shoes, kids, furniture, sports, tools.
 <br><br>
@@ -17,7 +17,7 @@ Well documented, very easy to customize &amp; does not require much knowledge of
 
 <img src="https://rafomoda.netlify.app/src/assets/img/rate.png" alt="rate-us">
 
-<h3 id="item-description__why-choose-rafomoda-fashion-template">Why choose RafoModa Fashion Template?</h3>
+<h3 id="item-description__why-choose-rafomoda-fashion-shop-template">Why choose RafoModa Fashion Shop Template?</h3>
 <ul>
 <li>
 <strong>Completely Responsive Design</strong>
